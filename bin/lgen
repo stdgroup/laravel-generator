@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use StdGroup\LaravelGenerator\InstallCommand;
+
+$application = new Application('Laravel Generator', '1.0');
+
+$application->add(new InstallCommand());
+
+$application->run();
